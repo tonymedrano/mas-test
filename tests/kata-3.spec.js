@@ -9,7 +9,7 @@ describe("kata-3", function() {
                 [42, 2500],
                 [246, 84100]
             ]);
-        }, 1000);
+        }, 100);
     });
 
     it("n=41 m=250 should return valid values", () => {
@@ -18,7 +18,7 @@ describe("kata-3", function() {
                 [42, 2500],
                 [246, 84100],
             ]);
-        }, 1000);
+        }, 100);
     });
 
     it("n=10 m=42 should return valid values", () => {
@@ -26,6 +26,6 @@ describe("kata-3", function() {
             assert.deepEqual(kata3(10, 42), [
                 [42, 2500]
             ]);
-        }, 1000);
+        }, 100);
     });
 });
