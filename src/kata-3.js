@@ -1,23 +1,11 @@
 export function kata3(n, m) {
     const result = [];
     for (let i = m; i <= n; i++) {
-
-        const divisor = [];
-        for (let l = 1; l <= i; l++) {
-
-            if (i % l === 0) {
-                divisor.push(l);
-            }
+        let sum = 0;
+        for (let j = 1; j <= i / 2; j++) {
+            i % j == 0 && (sum += j * j);
         }
-
-        let square = divisor.flatMap(x => [x * x]);
-
-        let sum = square.reduce((acummulator, currentValue) => acummulator + currentValue);
-
-        if (Number.isInteger(Math.sqrt(sum))) {
-            result.push([i, sum]);
-        }
-
+        Math.sqrt(sum + i * i) % 1 == 0 && result.push([i, sum + i * i]);
     }
     return result;
 }
