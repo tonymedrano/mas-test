@@ -1,5 +1,9 @@
 import React from 'react';
 
+type AppListProps = {
+  children: any,
+}
+
 const styles = {
     list: {
         padding: 0
@@ -10,7 +14,7 @@ const styles = {
       },
 };
 
-function AppList({children}:any) {
+function AppList({children}:AppListProps) {
   return (
     <div style={styles.list}>
       <h1>Phone List</h1>

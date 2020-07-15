@@ -1,20 +1,27 @@
 import React from 'react';
 
+type AppListItemProps = {
+  name: string,
+  description: string,
+  image: string,
+  color: string
+}
+
 const styles = {
-    card: {
-        boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
-        transition: '0.3s',
-        width: '40%',
-      },
-      container: {
-        padding: '2px 16px'
-      },
-      image: {
-        width:'100%'
-      }
+  card: {
+      boxShadow: '0 4px 8px 0 rgba(0,0,0,0.2)',
+      transition: '0.3s',
+      width: '40%',
+    },
+    container: {
+      padding: '2px 16px'
+    },
+    image: {
+      width:'100%'
+    }
 };
 
-function AppListItem({name, description, image, color}: any) {
+function AppListItem({name, description, image, color}: AppListItemProps) {
   return (
     <div style={styles.card}>
         <img src={image} alt={name} style={styles.image} />
