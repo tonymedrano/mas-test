@@ -1,0 +1,17 @@
+{
+    "phones": [{
+            "id": "1",
+            "name": "Samsung Galaxy S7",
+            "description": "Samsung Galaxy S7 Android smartphone. Announced Feb 2016. Features 5.1″ Super AMOLED display, Exynos 8890 Octa chipset, 12 MP primary camera",
+            "image": "https://www.androidcentral.com/sites/androidcentral.com/files/styles/mediumplus/public/article_images/2016/03/galaxy-s7-13.jpg",
+            "color": "gray"
+        },
+        {
+            "id": "2",
+            "name": "Iphone S7",
+            "description": "iPhone 7 Plus. iPhone 7 Plus. Brand: Apple Category: Mobiles. Processor: A10 Fusion+ M10 motion coprocessor. RAM: 3GB RAM. Storage: 32/128/256GB.",
+            "image": "https://t.ipadizate.es/2016/09/iPhone-7-y-iPhone-7-Plus-plata-y-rosa-640x431.jpg",
+            "color": "Rose"
+        }
+    ]
+}
