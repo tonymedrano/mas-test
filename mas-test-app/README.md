@@ -1,99 +1,44 @@
-# js-katas
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Se pide implementar las siguientes funciones (katas) siguiendo los siguientes requisitos para cada una de ellas.
+## Available Scripts
 
-El proyecto incluye los tests unitarios que estas implementaciones deben cumplir.
+In the project directory, you can run:
 
-Las soluciones se deberán subir a un repositorio público github/gitlab.
+### `yarn start`
 
-Es necesario disponer de node >= 8.9.4 para ejecutar correctamente el proyecto.
+Runs the app in the development mode.<br />
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-## HOW TO
+The page will reload if you make edits.<br />
+You will also see any lint errors in the console.
 
-Ejecutar `make install` para instalar las dependencias del proyecto.
+### `yarn test`
 
-Ejecutar `make test` para correr los test unitarios que validen las funciones implementadas.
+Launches the test runner in the interactive watch mode.<br />
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### KATA 1
+### `yarn build`
 
-Implementar una función que dado un número entero, retorne otro número formado por sus mismos digitos ordenados descendentemente.
+Builds the app for production to the `build` folder.<br />
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-Ejemplos:
+The build is minified and the filenames include the hashes.<br />
+Your app is ready to be deployed!
 
-    - 1234 ---> 4321
-    - 435677 ---> 776543
-    - 2030 ---> 3200
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### KATA 2
+### `yarn eject`
 
-Safe access.
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-Implementar un método que permita acceder de forma segura a propiedades de un objeto, incluso cuando dichas propiedades no existen.
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-La función debe admitir tres parametros: el objeto al que se va a acceder; el valor por defecto que va a devolver la función en caso de que la propiedad no exista dentro del objeto; y por último, un string indicando el path de la propiedad a consultar.
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-El path delimitará el camino en el cual se encuentra la propiedad a consultar. Los distintos niveles de profundidad se delimitarán con puntos.
-Además este último parametro es opcional. En caso de no proveerse, la función devolverá otra función que esperará ser invocada con el path de la propiedad como argumento.
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-Ejemplos:
+## Learn More
 
-```javascript=
-const obj = { p1: {
-                    p2: 'value'
-                }
-            }
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-get(obj, null, 'p1.p2') // ---> returns 'value'
-```
-
-```javascript=
-const obj = { p1: {
-                    p2: 'value'
-                }
-            }
-
-get(obj, 'default', 'p1.p2.p3') // ---> returns 'default'
-```
-
-```javascript=
-const obj = { p1: {
-                    p2: 'value'
-                }
-            }
-
-get(obj, null, 'p5.p2') // ---> returns null
-```
-
-```javascript=
-const obj = { p1: {
-                    p2: 'value'
-                }
-            }
-
-const accessor = get(obj, null)
-
-accessor('p1.p2') // ---> returns 'value'
-accessor('p3.p2.p5') // ---> returns null
-```
-
-### Kata 3
-
-El cuadrado.
-
-Los divisores de 42 son: `1, 2, 3, 6, 7, 14, 21, 42`. Los cuadrados respectivos de estos divisores son: `1, 4, 9, 36, 49, 196, 441, 1764`. La suma de los cuadrados de estos divisores es: `2500`. Que puede expresarse como `50 * 50`, un cuadrado!
-
-Se pide implementar una función que reciba dos parametros: n y m, siendo `m >= n >= 1` y halle todos los números entre `m` y `n` que cuya suma de sus divisores al cuadrado formen un cuadrado.
-
-La función debe devolver un array con todos los números en ese rango formados por pares de valores. Cada par de valores se compondra de: número que cumple la condición en primer lugar, y la suma de los divisores al cuadrado en la segunda.
-
-Ejemplos:
-
-```javascript=
-    squareDividers(1, 250) // ---> returns [ [1, 1], [42, 2500], [246, 84100] ]
-
-```
-
-## Debugging
-
-Para ejecutar el debugger de node usando las Chrome Developers Tools se ha de ejecutar en linea de comandos `make test-debug`.
-Esto levantará un inspector al cual se puede acceder en `chrome://inspect`.
+To learn React, check out the [React documentation](https://reactjs.org/).
