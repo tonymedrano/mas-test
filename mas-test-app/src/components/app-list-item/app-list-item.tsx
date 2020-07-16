@@ -1,6 +1,7 @@
 import React from 'react';
 
-type AppListItemProps = {
+export type AppListItemProps = {
+  id: string,
   name: string,
   description: string,
   image: string,
@@ -24,11 +25,11 @@ const styles = {
 function AppListItem({name, description, image, color}: AppListItemProps) {
   return (
     <div style={styles.card}>
-        <img src={image} alt={name} style={styles.image} />
+        <img data-testid="image" src={image} alt={name} style={styles.image} />
         <div style={styles.container}>
-            <h4><strong>{name}</strong></h4> 
-            <p><strong>Description:</strong> {description}</p> 
-            <p><strong>Color:</strong> {color}</p> 
+            <h4><strong data-testid="name">{name}</strong></h4> 
+            <p><strong data-testid="description">Description:</strong> {description}</p> 
+            <p><strong data-testid="color">Color:</strong> {color}</p> 
         </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import React from 'react';
 
-type AppListProps = {
-  children: any,
+export type AppListProps = {
+  children?: any,
 }
 
 const styles = {
@@ -17,8 +17,6 @@ const styles = {
 function AppList({children}:AppListProps) {
   return (
     <div style={styles.list}>
-      <h1>Phone List</h1>
-      <hr />
       <div style={styles.container}>
       {children}
       </div>

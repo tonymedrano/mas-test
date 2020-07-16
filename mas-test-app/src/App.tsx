@@ -3,8 +3,6 @@ import './App.css';
 
 import axios from 'axios';
 
-import {  } from "./data/phones.json";
-
 import AppList from "./components/app-list/app-list";
 import AppListItem from "./components/app-list-item/app-list-item";
 
@@ -26,6 +24,8 @@ function App() {
 
   return (
     <div className="App">
+      <h1>Phone List</h1>
+      <hr />
       <AppList>
       {data.phones.map((phone: any) => (
         <AppListItem 
