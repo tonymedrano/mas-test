@@ -1,7 +1,7 @@
 import React from 'react';
 
 export type AppListItemProps = {
-  id: string,
+  id?: string,
   name: string,
   description: string,
   image: string,
